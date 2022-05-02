@@ -12,6 +12,7 @@
 
 <script>
 import ListReport from '../components/list-report.vue';
+import listReport from '../services/ReportUser/ListReport.js';
 
 export default {
     components: {
@@ -19,12 +20,21 @@ export default {
     },
     data() {
         return {
-           
+            data:[]
         }
     },
     methods: {
        
-    }
+    },
+    mounted() {
+        listReport().then(response => {
+           
+            this.data = response;
+            console.log(this.data)
+        }).catch(error => {
+            console.log(error);
+        })
+    },
 
 }
 </script>

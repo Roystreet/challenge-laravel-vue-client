@@ -2,7 +2,7 @@
   <div> 
     <nav id="nav_bar"> 
         <div> 
-            <h1><span style="color: #FFBE12"> Tk</span>ambio</h1>
+            <h1><span style="color: #FFBE12">Tk</span>ambio</h1>
         </div>
     </nav>
      <router-view/>
@@ -29,5 +29,8 @@ export default {
     font-family: "newfont";
 
 }
-  
+ 
+ body{
+   font-family: "newfont";
+ }
 </style>
