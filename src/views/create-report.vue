@@ -11,16 +11,16 @@
                 <h4> fecha de nacimiento </h4>
                 <div class="date_container">
                     <fieldset>
-                    <legend>inicio</legend>
-                    <input  type="date" name="start" v-model="start">
+                        <legend>inicio</legend>
+                            <input  type="date" name="start" v-model="start">
                     </fieldset>
-                      <fieldset>
-                    <legend>fin</legend>
-                    <input  type="date" name="end" v-model="end">
+                    <fieldset>
+                        <legend>fin</legend>
+                             <input  type="date" name="end" v-model="end">
                     </fieldset>
-              </div>
+                </div>
               
-              <input type="submit" value="Generar reporte" @click="createReport"/>
+              <input  class="btn"  type="submit" value="Generar reporte" @click="createReport"/>
 
             </form>
 
@@ -46,7 +46,8 @@ export default {
                 console.log(error);
             })
          }
-    }
+    },
+    
 }
 </script>
 
@@ -57,15 +58,37 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius:15px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /*border-radius:15px;*/
+    /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
     padding:15px;
-    border: solid 1px rgba(0, 0, 0, 0.25);
+    /*border: solid 1px rgba(251, 222, 222, 0.25);*/
     margin-top: 20px;
 }
 .date_container{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #FFBE12;
+    border-radius: 50px;
+    padding: 12px 40px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    text-decoration-style: none;
+    color: black;
+    font-size:20px;
+    margin-top:20px;
+
+}
+.form_container_input{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 

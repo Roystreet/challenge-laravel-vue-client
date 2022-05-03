@@ -30,7 +30,4 @@ export default {
 
 }
  
- body{
-   font-family: "newfont";
- }
 </style>
